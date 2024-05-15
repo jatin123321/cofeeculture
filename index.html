@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/Coffee__Culture.css">
+    <style>
+        /* Your custom CSS styles go here */
+    </style>
 </head>
 <body>    
     <div id="intro" class="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-01.jpg">
@@ -58,7 +61,7 @@
                     <div class="flex items-start mb-6 tm-menu-item">
                         <img src="img/menu-item-1.jpg" alt="Image" class="rounded-md">
                         <div class="ml-3 sm:ml-6">
-                             <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Cappuccino</h3>
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Cappuccino</h3>
                             <div class="text-white text-md sm:text-lg font-light mb-1">Small 100</div>
                             <div class="text-white text-md sm:text-lg font-light">Large 100.50</div>
                         </div>                    
@@ -121,12 +124,20 @@
                             <div class="text-white text-md sm:text-lg font-light">Small 350</div>
                             <div class="text-white text-md sm:text-lg font-light">Large 400</div>
                         </div> 
-                        <img src="img/menu-item-8.jpg" alt="Image" class="rounded-md">                   
+                        <img src="img/menu-item-8.jpg" alt="Image" class="rounded-md">       
                     </div>
                 </div>
             </div>
+            <!-- Order button -->
+            <div class="text-center mt-10">
+                <a href="https://www.zomato.com/jaipur/caf%C3%A9-culture-espresso-jagatpura" class="inline-block bg-black bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition">
+                    <i class="fas fa-mug-hot mr-3"></i>
+                    <span>Place Your Order</span>                        
+                </a>
+            </div>
         </div>        
     </div>
+    <!-- About section -->
     <div id="about" class="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-03.jpg">
         <div class="container mx-auto tm-container py-24 sm:py-48">
             <div class="tm-item-container sm:ml-auto sm:mr-12 mx-auto sm:px-0 px-4">
@@ -144,13 +155,15 @@
             </div>           
         </div>        
     </div>
+    <!-- Contact section -->
     <div id="contact" class="parallax-window relative" data-parallax="scroll" data-image-src="img/antique-cafe-bg-04.jpg">
         <div class="container mx-auto tm-container pt-24 pb-48 sm:py-48">
             <div class="flex flex-col lg:flex-row justify-around items-center lg:items-stretch">
                 <div class="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
                     <h2 class="text-3xl mb-6 tm-text-green">Contact Us</h2>
                     <p class="mb-6 text-lg leading-8">
-                         
+                        Praesent tellus magna, consectetur sit amet volutpat eu, pulvinar vitae sem.
+                        Sed ultrices. bg white 80% alpha. btn #066    
                     </p>
                     <p class="mb-10 text-lg">
                         <span class="block mb-2">Tel: <a href="tel:0100200340" class="hover:text-yellow-600 transition">9683546542</a></span>
@@ -191,7 +204,7 @@
                           </div>
                           <div class="form-group">
                             <label for="phone" class="form-label">Phone</label>
-                            <input id="phone" name="phone" class="form-input" placeholder="+91 9874563214" type="text" />
+                            <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
                           </div>
                           <div class="form-group">
                             <label for="message" class="form-label">Message</label>
@@ -265,5 +278,4 @@
         });
     </script>
 </body>
-</html> 
-
+</html>
