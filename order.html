@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Order Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #131212;
+            color: #FFF;
+            margin: 20px;
+        }
+        .order-section {
+            width: 100%;
+            max-width: 40rem;
+            margin: auto;
+            padding: 3rem 1rem;
+        }
+        .order-intro > * + * {
+            margin-top: 1rem;
+        }
+        .order-title {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 700;
+        }
+        .order-description {
+            color: rgb(107 114 128);
+        }
+        .form-group-container {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-label {
+            margin-bottom: 0.5rem;
+        }
+        .form-input,
+        .form-select {
+            padding: 0.5rem;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            height: 2.5rem;
+            width: 100%;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+        .form-input::placeholder,
+        .form-input:focus-visible,
+        .form-select:focus-visible {
+            color: #6b7280;
+        }
+        .form-input:focus-visible,
+        .form-select:focus-visible {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+        .form-submit {
+            width: 100%;
+            margin-top: 1.2rem;
+            background-color: #3124ca;
+            color: #fff;
+            padding: 13px 5px;
+            border-radius: 0.375rem;
+        }
+        .form-submit:hover {
+            background-color: #0a8585;
+        }
+    </style>
+</head>
+<body>
+    <section class="order-section">
+        <div class="order-intro">
+            <h2 class="order-title">Place Your Order</h2>
+            <p class="order-description">Fill out the form below to place your order.</p>
+        </div>
+        <form id="orderForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="f4a8f013-83ed-4860-9bf9-c7ea82a37c5a">
+            <div class="form-group-container">
+                <div class="form-group">
+                    <label for="customerName" class="form-label">Customer Name:</label>
+                    <input type="text" id="customerName" name="customerName" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="form-label">Address:</label>
+                    <input type="text" id="address" name="address" class="form-input" placeholder="Your address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNo" class="form-label">Phone No:</label>
+                    <input type="text" id="phoneNo" name="phoneNo" class="form-input" placeholder="+91 999999999" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemSelect" class="form-label">Select Item:</label>
+                    <select id="itemSelect" name="itemSelect" class="form-select" required>
+                        <option value="coffee">Coffee</option>
+                        <option value="hot cappuccino">Hot Cappuccino</option>
+                        <option value="Iced cappuccino">Iced Cappuccino</option>
+                        <option value="hot latte">Hot Latte</option>
+                        <option value="iced milky latte">Iced Milkey Latte</option>
+                        <option value="hot espresso">Hot Espresso</option>
+                        <option value="Iced espresso">Iced Espresso</option>
+                        <option value="hot americano">Hot Americano</option>
+                        <option value="iced americano">Iced Americano</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity" class="form-label">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" class="form-input" placeholder="Number of items" required>
+                </div>
+                <button type="submit" class="form-submit">Submit Order</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
